@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+import { Button, Container ,TextField} from '@material-ui/core';
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
+import PostData from './screens/PostData';
+import UsestateObject from './screens/UsestateObject';
 
 function App() {
+  // const [firstName, setFirstName] = useState('Saiora')
+  // const [lastName, setLastName] = useState('werty')
+  // const [email, setEmail] = useState('wertyui@dfgh')
+
+  // const [data, setData] = useState('')
+
+  // const _submit=()=>{
+  //   setData(`${firstName} ${lastName} ${email}`)
+  // }
+  const inputRef=useRef(null)
+
+// useEffect(() => {
+//   inputRef.current.focus()
+// }, [])
+
+
+const _focus=()=>{
+  inputRef.current.focus()
+}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <UsestateObject/>
+      <PostData/>
+      <input ref={inputRef} />
+      <Button onClick={_focus}>
+        Focus
+      </Button>
+    </>
   );
 }
 
