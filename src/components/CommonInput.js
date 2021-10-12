@@ -1,35 +1,35 @@
 import React from 'react'
-import { TextField } from '@material-ui/core';
+import { TextField ,makeStyles} from '@material-ui/core';
 
-const CommonInput = (props) => {
+
+const useStyles = makeStyles({
+    root: {
+        marginBottom:20
+    },
+  });
+
+const CommonInput = ({variant,label,placeholder,value,onChange}) => {
+    const classes = useStyles();
     // destructuring
-    const {placeholder,value,onChange}=props 
+    // const {variant,label,placeholder,value,onChange}=props 
+    // const {variant,label,placeholder,value,onChange}=props
     return (
       <>
-      <TextField  
-            placeholder={placeholder} 
-            onChange={onChange} 
-            value={value}
-            fullWidth
-       />
+        <TextField 
+                variant={variant}
+                label={label}
+                placeholder={placeholder}
+                value={value}
+                onChange={onChange}
+                required
+                fullWidth
+                className={classes.root}
+            />
      
-</>
+      </>
     )
 }
 
 export default CommonInput
 
-// import React from 'react'
-// import { TextField } from '@material-ui/core';
-// // props
-// const CommonInput = ({placeholder,value,onChange}) => {
-//     return (
-//       <TextField  
-//             placeholder={placeholder} 
-//             onChange={onChange} 
-//             value={value}
-//             fullWidth
-//        />
-//     )
-// }
-// export default CommonInput
+

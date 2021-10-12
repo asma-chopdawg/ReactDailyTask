@@ -1,7 +1,9 @@
-import { Button, Container ,TextField} from '@material-ui/core';
+import { Button, Container ,TextField, Typography} from '@material-ui/core';
 import { useEffect, useRef, useState } from 'react';
 import './App.css';
+import Notes from './screens/Notes';
 import PostData from './screens/PostData';
+import TypographyComp from './screens/TypographyComp';
 import UsestateObject from './screens/UsestateObject';
 
 function App() {
@@ -27,12 +29,14 @@ const _focus=()=>{
   return (
     <>
     {/* git */}
-      <UsestateObject/>
+      {/* <UsestateObject/>
       <PostData/>
       <input ref={inputRef} />
       <Button onClick={_focus}>
         Focus
       </Button>
+      <TypographyComp/> */}
+      <Notes/>
     </>
   );
 }

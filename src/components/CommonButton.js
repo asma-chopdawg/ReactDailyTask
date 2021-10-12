@@ -4,7 +4,11 @@ import React from 'react'
 export const CommonButton = (props) => {
     const {button,onClick}=props
     return (
-       <Button variant="outlined" onClick={onClick} style={{marginTop:10}}>
+       <Button 
+        variant="outlined" 
+        onClick={onClick} 
+        style={{marginTop:10}}
+       >
            {button}
         </Button>
     )
