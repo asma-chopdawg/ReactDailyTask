@@ -1,8 +1,9 @@
-import {  Container, FormControl, FormControlLabel, FormLabel, makeStyles, Radio, RadioGroup, TextField, Typography } from '@material-ui/core'
+import {  Container, FormControl, FormControlLabel, FormLabel, Grid, makeStyles, Radio, RadioGroup, TextField, Typography } from '@material-ui/core'
 import React, { useState } from 'react'
 import { CommonButton } from '../components/CommonButton';
 import CommonInput from '../components/CommonInput'
 import CommonRadio from '../components/CommonRadio';
+import CommonText from '../components/CommonText';
 
 const Notes = () => {
 
@@ -13,14 +14,12 @@ const Notes = () => {
 
     return (
        <Container>
-           <Typography 
-                variant="h6"
-                color="primary"
-                gutterBottom
-                align={'center'}
-                >
-                    Note Taking App
-            </Typography>
+           <CommonText 
+                text={'Note taking App'}
+                variant="h4"
+                color="secondary"
+                align="center"
+           />
            <CommonInput
                 variant={"outlined"}
                 placeholder={'Title'}
@@ -39,6 +38,26 @@ const Notes = () => {
             <div>
                 <CommonButton button={'Submit'} />
             </div>
+            <Grid container spacing={2}>
+            <Grid item md={5} >
+                <CommonText 
+                    text="content1"
+                    variant="h4"
+                    color="secondary"
+                    align="center"
+            />
+            </Grid>
+
+            <Grid item  md={5}>
+                <CommonText 
+                    text="content2"
+                    variant="h4"
+                    color="secondary"
+                    align="center"
+                />
+            </Grid>
+            
+            </Grid>
        </Container>
     )
 }

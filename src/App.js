@@ -1,6 +1,7 @@
-import { Button, Container ,TextField, Typography} from '@material-ui/core';
+import { Button, Card, Container ,TextField, Typography} from '@material-ui/core';
 import { useEffect, useRef, useState } from 'react';
 import './App.css';
+import CommonCard from './components/CommonCard';
 import Notes from './screens/Notes';
 import PostData from './screens/PostData';
 import TypographyComp from './screens/TypographyComp';
@@ -27,7 +28,7 @@ const _focus=()=>{
   inputRef.current.focus()
 }
   return (
-    <>
+    <Container>
     {/* git */}
       {/* <UsestateObject/>
       <PostData/>
@@ -36,8 +37,9 @@ const _focus=()=>{
         Focus
       </Button>
       <TypographyComp/> */}
-      <Notes/>
-    </>
+      {/* <Notes/> */}
+      <CommonCard/>
+    </Container>
   );
 }
 
