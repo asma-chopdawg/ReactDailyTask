@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import CommonCard from './components/CommonCard';
 import CommonCard2 from './components/CommonCard2';
+import GridComp from './components/GridComp';
 import Notes from './screens/Notes';
 import PostData from './screens/PostData';
 import TypographyComp from './screens/TypographyComp';
@@ -39,7 +40,8 @@ const _focus=()=>{
       </Button>
       <TypographyComp/> */}
       {/* <Notes/> */}
-      <CommonCard2/>
+      {/* <CommonCard2/> */}
+      <GridComp/>
     </Container>
   );
 }
